@@ -29,6 +29,13 @@ public class HowMany {
             System.out.println(num + " 해당 수는 4자리입니다.");
 
         //자바에서 지원하는 Math 함수를 이용한 방법 주석을 해제하고 실행해 보세요
-        System.out.println("해당 수는 "+(int)(Math.log10(num)+1)+"자리 입니다.");
+        //System.out.println("해당 수는 "+(int)(Math.log10(num)+1)+"자리 입니다.");
+
+        /*Math 에 있는 Log10 함수는 승수를 구해줍니다 50의 경우 1.69 로 소수의 승수 값이 나오는데
+        이는 log10 의 리턴 타입이 double 이기 때문입니다 그렇기에 (int)(Math.log10(num)+1) 에서
+        (int)로 감싸주어 인트타입으로 형변환을 해줍니다 그럼 50의 값의 리턴값은 1이 나오는데요
+        (int)(Math.log10(num)+1) 처럼 끝에 +1을 추가하여 2가 나오게 합니다 그럼 50의 자리수는 2자리가
+        출력됩니다.
+         */
     }
 }
