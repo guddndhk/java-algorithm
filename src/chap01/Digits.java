@@ -16,7 +16,7 @@ public class Digits {
             no = scanner.nextInt();
         } while (no < 10 || no > 99);
         // 논리연산자 ||(OR) no 가 10보다 작거나 99보다 크면 do while 문의 루프를 계속 순환합니다.
-        //이부분은 블로그 게시글에 추가 설명 하겠습니다.
+        //논리연산자는 블로그 게시글에 추가 설명 하겠습니다.
 
         System.out.println("변수 no의 값은 " + no + "가 되었습니다.");
     }
