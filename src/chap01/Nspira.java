@@ -26,6 +26,7 @@ public class Nspira {
             System.out.println();
         }
     }
+
     // 두번째 방법
     static void nnSpira(int n) {
 
