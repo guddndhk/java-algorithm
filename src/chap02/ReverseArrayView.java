@@ -1,30 +1,10 @@
 package chap02;
 
+import java.lang.reflect.Array;
+import java.util.Arrays;
 import java.util.Scanner;
 
 public class ReverseArrayView {
-
-    static void swap(int[] a, int index1, int index2) {
-        /*int sum = a[index1];
-        a[index1] = a[index2];
-        a[index2] = sum;
-    */
-        int sum = 0;
-        for (int i = 0; i < a.length; i++) {
-            sum = a[index1];
-            a[index1] = a[index2];
-            a[index2] = sum;
-            //System.out.println("a["+a[index1]+"]과 a["+a[index2]+"]를 교환합니다.");
-            System.out.println(a[index1]);
-        }
-    }
-
-
-    static void reverse(int[] a) {
-        for (int i = 0; i < a.length / 2; i++) {
-            swap(a, i, a.length - i - 1);
-        }
-    }
 
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
@@ -39,12 +19,20 @@ public class ReverseArrayView {
             x[i] = scanner.nextInt();
         }
 
-        reverse(x);
-
-        System.out.println("역순 정렬");
-        for (int i = 0; i < num; i++) {
-            System.out.println("x[" + i + "] = " + x[i]);
+        for (int i = 0; i < x.length / 2; i++) {
+            System.out.println(Arrays.toString(x));
+            System.out.println("a[" + i + "]와 a[" + (x.length - i - 1) + "]를 교환합니다.");
+            int sum = x[i];
+            x[i] = x[x.length - i - 1];
+            x[x.length - i - 1] = sum;
+            for (int j = 0; j< num;j++ ){
+                //System.out.print(x[j]);
+            }
+            //System.out.println();
         }
+        System.out.println("역순 정렬을 마쳤습니다.");
+
+
 
     }
 }
