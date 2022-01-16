@@ -18,20 +18,24 @@ public class ReverseArrayView {
             System.out.print("x[" + i + "] : ");
             x[i] = scanner.nextInt();
         }
+        System.out.println("===========================");
 
+        for (int k = 0; k < num; k++) {
+            System.out.print(x[k]);
+        }
+        System.out.println();
         for (int i = 0; i < x.length / 2; i++) {
-            System.out.println(Arrays.toString(x));
+            //System.out.println(Arrays.toString(x));
             System.out.println("a[" + i + "]와 a[" + (x.length - i - 1) + "]를 교환합니다.");
             int sum = x[i];
             x[i] = x[x.length - i - 1];
             x[x.length - i - 1] = sum;
-            for (int j = 0; j< num;j++ ){
-                //System.out.print(x[j]);
+            for (int j = 0; j < num; j++) {
+                System.out.print(x[j]);
             }
-            //System.out.println();
+            System.out.println();
         }
         System.out.println("역순 정렬을 마쳤습니다.");
-
 
 
     }
