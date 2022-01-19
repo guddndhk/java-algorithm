@@ -3,21 +3,21 @@ package chap02;
 import java.util.Arrays;
 import java.util.Scanner;
 
+/*
+static void copy(int[] a, int[] b) 배열 b 의 요소를 배열 a 에 복사하는 메서드를 작성하시오.
+ */
+
 public class CopyArray {
 
-    static void equals(int[] a, int[] b) {
+    static void copy(int[] a, int[] b) {
 
         if (a != b)
-            b = a;
-        for (int i = 0; i < a.length; i++) {
-            if (a[i] != b[i])
-                a[i] = b[i];
-        }
+            a = b.clone();
+        System.out.println("int[] a : "+Arrays.toString(a));
+        System.out.println("int[] b : "+Arrays.toString(b));
+        System.out.println("복사가 완료 되었습니다.");
     }
 
-    static void copy(int[] a, int[] b){
-
-    }
 
     public static void main(String[] args){
         Scanner scanner = new Scanner(System.in);
@@ -42,13 +42,7 @@ public class CopyArray {
             b[i] = scanner.nextInt();
         }
 
-        equals(a, b);
-
-        for (int i = 0 ; i < b.length; i++){
-            System.out.println("a[" + i + "] = " + Arrays.toString(a));
-            System.out.println("\nb[" + i + "] = " + Arrays.toString(b));
-        }
-
+        copy(a, b);
 
     }
 }
