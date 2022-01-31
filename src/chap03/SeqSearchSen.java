@@ -12,12 +12,20 @@ public class SeqSearchSen {
 
         a[n] = key;// 보초를 배치
 
+        /*
         while (true) {// 종료 조건이 필요하지 않기에 하나의 if 문을 사용 그러므로 반복 종료 판단횟수가 줄어듬.
             if (a[i] == key) {
                 break;
             }
             i++;
         }
+
+         */
+        //for 문 방식 추가
+        for (i = 0; a[i] != key; i++){
+
+        }
+
         return i == n ? -1 : i;
     }
 
